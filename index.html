@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library App</title>
+    <link rel="stylesheet" href="./styles/index.css">
     <script src="./scripts/main.js" defer></script>
+
 </head>
 
 <body>
@@ -13,26 +15,42 @@
         <h1>Library App</h1>
     </header>
     <main>
-        <button>New Book</button>
-        <form id="new-book" action="#" method="post">
-            <div class="form-control">
-                <label for="title">Book Title</label>
-                <input id="title" name="title" type="text">
-            </div>
-            <div class="form-control">
-                <label for="author">Author</label>
-                <input id="author" name="author" type="text">
-            </div>
-            <div class="form-control">
-                <label for="pages">Pages</label>
-                <input id="pages" name="pages" type="text">
-            </div>
-            <div class="form-control">
-                <label for="read">Read</label>
-                <input id="read" name="read" type="text">
-            </div>
+
+        <form id="book" class="hidden-form" action="#" method="post" autocomplete="on">
+            <fieldset>
+                <legend class="form-title">Add a book</legend>
+                <div class="form-control">
+                    <label for="title">Book Title</label>
+                    <input id="title" name="title" type="text">
+                </div>
+                <div class="form-control">
+                    <label for="author">Author</label>
+                    <input id="author" name="author" type="text">
+                </div>
+                <div class="form-control">
+                    <label for="pages">Pages</label>
+                    <input id="pages" name="pages" type="number">
+                </div>
+                <fieldset class="read-container">
+                    <legend class="read-title">Read</legend>
+                    <div class="form-control-radio">
+                        <label for="yes">yes</label>
+                        <input type="radio" id="yes" name="read_status">
+                    </div>
+                    <div class="form-control-radio">
+                        <label for="no">no</label>
+                        <input type="radio" id="no" name="read_status">
+                    </div>
+                </fieldset>
+
+                <button class="add-book-btn">Add</button>
+            </fieldset>
         </form>
+        <button class="create-card-btn">New Book</button>
     </main>
+    <section>
+        <div class="books-container"></div>
+    </section>
 </body>
 
 </html>

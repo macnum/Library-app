@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background-color: #eeefea;
+}
+form.hidden-form{
+  /* display: none; */
+}
+#book{
+  width: 12rem;
+  color: #fff;
+  position: relative;
+}
+#book fieldset {
+  background:linear-gradient(45deg, #7a0303, #5252e3);
+  border-radius: 5px;
+  border: none;
+  padding-top: 35px;
+}
+#book .form-title {
+  top: 5px;
+  position: absolute;
+}
+.form-control input{
+  margin:3px 0;
+  padding: 0.4rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px  solid black;
+}
+.form-control input:focus {
+  border: 1px solid #5252e3;
+}
+.form-control input:hover {
+  border: 1px solid #7a0303;
+}
+.read-container {
+  display: flex;
+  margin: 10px 0;
+  padding: 5px 0;
+  background-color: #eeefea;
+  position:relative;
+}
+.read-title {
+  position: absolute;
+  top: 10px;
+}
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+.form-control-radio {
+  display: flex;
+  height: 20px;
+
+}
+button {
+  padding: 10px 25px;
+  background-color: #5252e3;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.create-card-btn {
+  margin: 20px 0;
+}
