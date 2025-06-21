@@ -5,10 +5,24 @@
 
 
 body {
-    background-color: #eeefea;
+  background:linear-gradient(95deg, #ba5151, #7767ce);
+  color: #fff;
+  text-align: center;
+} 
+.hidden{
+  display: none;
 }
-form.hidden-form{
-  /* display: none; */
+
+main {
+  box-shadow: 2px 2px 6px rgba(89, 0, 255, 0.855);
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 59.375rem;
+  min-width: 12.5rem;
+  width: 400px;
+  margin: auto;
 }
 #book{
   width: 12rem;
@@ -22,8 +36,9 @@ form.hidden-form{
   padding-top: 35px;
 }
 #book .form-title {
-  top: 5px;
+  top: 7px;
   position: absolute;
+  font-size: large;
 }
 .form-control input{
   margin:3px 0;
@@ -31,6 +46,7 @@ form.hidden-form{
   border-radius: 5px;
   outline: none;
   border: 1px  solid black;
+  background-color: #c8b9b9;
 }
 .form-control input:focus {
   border: 1px solid #5252e3;
@@ -58,14 +74,39 @@ form.hidden-form{
   height: 20px;
 
 }
-button {
-  padding: 10px 25px;
-  background-color: #5252e3;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
+
+
+fieldset svg {
+  fill: #ffffff;
+  width: 45px;
 }
 
+fieldset svg:hover {
+  fill: #5252e3;
+}
 .create-card-btn {
   margin: 20px 0;
+  fill: #7a0303;
+
+  svg {
+    width: 100%;
+  }
+}
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: .5rem;
+}
+
+.card{
+  width: 11rem;
+  height: 15.5rem;
+  background:linear-gradient(45deg, #7a0303, #5252e3);
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 5px;
 }
