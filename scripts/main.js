@@ -1,7 +1,7 @@
 const myLibrary = [];
 
 const btn = document.querySelector('.create-card-btn');
-const form = document.querySelector('.hidden-form');
+const form = document.querySelector('.hidden');
 const formBtn = document.querySelector('.add-book-btn');
 const inputTitle = document.querySelector('#title');
 const inputAuthor = document.querySelector('#author');
@@ -87,6 +87,6 @@ function clearInput() {
 showBookInLibrary();
 
 btn.addEventListener('click', (e) => {
-	form.classList.toggle('hidden-form');
+	form.classList.toggle('hidden');
 });
 console.log(myLibrary);
