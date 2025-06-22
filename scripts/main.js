@@ -26,6 +26,9 @@ Book.prototype.info = function () {
 // const theHobbit = new Book('Hobbit', 'J.R.R. Tolkien', 295, false);
 
 function addBookToLibrary(title, author, pages, read) {
+	if (!title || !author || !pages || !read) {
+		return;
+	}
 	// take params, create a book then store it in the array;
 	const book = new Book(title, author, pages, read);
 	const uuid = crypto.randomUUID();
