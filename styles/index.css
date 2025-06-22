@@ -9,9 +9,6 @@ body {
   color: #fff;
   text-align: center;
 } 
-.hidden{
-  display: none;
-}
 
 main {
   box-shadow: 2px 2px 6px rgba(89, 0, 255, 0.855);
@@ -84,7 +81,7 @@ fieldset svg {
 fieldset svg:hover {
   fill: #5252e3;
 }
-.create-card-btn {
+.create-form-btn {
   margin: 20px 0;
   fill: #7a0303;
 
@@ -98,6 +95,21 @@ fieldset svg:hover {
   gap: .5rem;
 }
 
+
+
+
+.cancel.top {
+  position: absolute;
+  top: 5px;
+  right: -20px;
+  background-color: #7767ce;
+  background:linear-gradient(45deg, #7a0303, #5252e3)
+}
+
+
+
+
+
 .card{
   width: 11rem;
   height: 15.5rem;
@@ -109,4 +121,9 @@ fieldset svg:hover {
   justify-content: center;
   align-items: center;
   margin: 50px 5px;
+}
+dialog {
+  background:linear-gradient(45deg, #7a0303, #5252e3);
+  height: fit-content;
+  width: 15rem;
 }

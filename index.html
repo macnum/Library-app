@@ -20,42 +20,42 @@
     </header>
     <main>
 
-        <form id="book" class="hidden" action="#" method="post" autocomplete="on">
-            <fieldset>
-                <legend class="form-title">Add a book</legend>
-                <div class="form-control">
-                    <label for="title">Book Title</label>
-                    <input id="title" name="title" type="text">
-                </div>
-                <div class="form-control">
-                    <label for="author">Author</label>
-                    <input id="author" name="author" type="text">
-                </div>
-                <div class="form-control">
-                    <label for="pages">Pages</label>
-                    <input id="pages" name="pages" type="number">
-                </div>
-                <fieldset class="read-container">
-                    <legend class="read-title">Read</legend>
-                    <div class="form-control-radio">
-                        <label for="yes">yes</label>
-                        <input type="radio" id="yes" name="read_status" value="yes">
+        <dialog>
+            <form id="book" action="#" method="dialog" autocomplete="on">
+                <fieldset>
+                    <legend class="form-title">Add a book</legend>
+                    <button autofocus class="cancel top"><i class="fa-solid fa-xmark"></i></button>
+                    <div class="form-control">
+                        <label for="title">Book Title</label>
+                        <input id="title" name="title" type="text">
                     </div>
-                    <div class="form-control-radio">
-                        <label for="no">no</label>
-                        <input type="radio" id="no" name="read_status" value="no">
+                    <div class="form-control">
+                        <label for="author">Author</label>
+                        <input id="author" name="author" type="text">
                     </div>
-                </fieldset>
-                <span class="add-book-btn"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <title>book-plus</title>
-                        <path
-                            d="M13 19C13 20.1 13.3 21.12 13.81 22H6C4.89 22 4 21.11 4 20V4C4 2.9 4.89 2 6 2H7V9L9.5 7.5L12 9V2H18C19.1 2 20 2.89 20 4V13.09C19.67 13.04 19.34 13 19 13C15.69 13 13 15.69 13 19M20 18V15H18V18H15V20H18V23H20V20H23V18H20Z" />
-                    </svg></span>
+                    <div class="form-control">
+                        <label for="pages">Pages</label>
+                        <input id="pages" name="pages" type="number">
+                    </div>
+                    <fieldset class="read-container">
+                        <legend class="read-title">Read</legend>
+                        <div class="form-control-radio">
+                            <label for="yes">yes</label>
+                            <input type="radio" id="yes" name="read_status" value="yes">
+                        </div>
+                        <div class="form-control-radio">
+                            <label for="no">no</label>
+                            <input type="radio" id="no" name="read_status" value="no">
+                        </div>
+                    </fieldset>
+                    <button class="add-book-btn">Submit</button>
 
-            </fieldset>
-        </form>
+                </fieldset>
+            </form>
+
+        </dialog>
         <div class="create">
-            <span class="create-card-btn"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <span class="create-form-btn"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <title>book-plus</title>
                     <path
                         d="M13 19C13 20.1 13.3 21.12 13.81 22H6C4.89 22 4 21.11 4 20V4C4 2.9 4.89 2 6 2H7V9L9.5 7.5L12 9V2H18C19.1 2 20 2.89 20 4V13.09C19.67 13.04 19.34 13 19 13C15.69 13 13 15.69 13 19M20 18V15H18V18H15V20H18V23H20V20H23V18H20Z" />

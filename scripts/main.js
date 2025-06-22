@@ -1,12 +1,14 @@
 const myLibrary = [];
 
-const btn = document.querySelector('.create-card-btn');
 const form = document.querySelector('.hidden');
-const formBtn = document.querySelector('.add-book-btn');
+const dialog = document.querySelector('dialog');
+const showButton = document.querySelector('.create-form-btn');
+const closeButton = document.querySelector('dialog button');
 const inputTitle = document.querySelector('#title');
 const inputAuthor = document.querySelector('#author');
 const inputPages = document.querySelector('#pages');
 const booksContainer = document.querySelector('.books-container');
+const cancelBtn = document.querySelector('.cancel');
 
 function Book(title, author, pages, read) {
 	if (!new.target) {
@@ -36,7 +38,7 @@ addBookToLibrary('Hobbit', 'J.R.R. Tolkien', 295);
 // addBookToLibrary('The Hunger Games', 'Suzanne Collins', 384);
 
 function showBookInLibrary() {
-	formBtn.addEventListener('click', (e) => {
+	closeButton.addEventListener('click', (e) => {
 		booksContainer.innerHTML = '';
 		e.preventDefault();
 		const bookTitle = inputTitle.value;
@@ -86,7 +88,16 @@ function clearInput() {
 }
 showBookInLibrary();
 
-btn.addEventListener('click', (e) => {
-	form.classList.toggle('hidden');
-});
 console.log(myLibrary);
+const cancelDialogBtn = cancelBtn.querySelector('.top');
+console.log(cancelDialogBtn);
+
+// "Show the dialog" button opens the dialog modally
+showButton.addEventListener('click', () => {
+	dialog.showModal();
+});
+
+// "Close" button closes the dialog
+closeButton.addEventListener('click', () => {
+	dialog.close();
+});
