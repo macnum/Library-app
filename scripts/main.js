@@ -3,7 +3,8 @@ const myLibrary = [];
 const form = document.querySelector('.hidden');
 const dialog = document.querySelector('dialog');
 const showButton = document.querySelector('.create-form-btn');
-const closeButton = document.querySelector('dialog button');
+const submitButton = document.querySelector('.add-book-btn');
+const closeButton = document.querySelector('dialog .cancel.top');
 const inputTitle = document.querySelector('#title');
 const inputAuthor = document.querySelector('#author');
 const inputPages = document.querySelector('#pages');
@@ -23,8 +24,6 @@ Book.prototype.info = function () {
 	return `The ${this.title} by ${this.author}, ${this.pages} pages.`;
 };
 
-// const theHobbit = new Book('Hobbit', 'J.R.R. Tolkien', 295, false);
-
 function addBookToLibrary(title, author, pages, read) {
 	if (!title || !author || !pages || !read) {
 		return;
@@ -37,26 +36,22 @@ function addBookToLibrary(title, author, pages, read) {
 	return;
 }
 
-addBookToLibrary('Hobbit', 'J.R.R. Tolkien', 295);
+// addBookToLibrary('Hobbit', 'J.R.R. Tolkien', 295);
 // addBookToLibrary('The Hunger Games', 'Suzanne Collins', 384);
 
 function showBookInLibrary() {
-	closeButton.addEventListener('click', (e) => {
+	submitButton.addEventListener('click', (e) => {
 		booksContainer.innerHTML = '';
 		e.preventDefault();
 		const bookTitle = inputTitle.value;
 		const bookAuthor = inputAuthor.value;
-		const bookPages = inputPages.value;
+		const bookPages = parseInt(inputPages.value, 10);
 		const bookIsRead = document.querySelector(
 			'input[name="read_status"]:checked'
 		);
+		const readValue = bookIsRead ? bookIsRead.value : 'no';
 
-		addBookToLibrary(
-			bookTitle,
-			bookAuthor,
-			bookPages,
-			bookIsRead.value ?? 'no'
-		);
+		addBookToLibrary(bookTitle, bookAuthor, bookPages, readValue);
 		myLibrary.forEach((item) => {
 			const div = document.createElement('div');
 			div.classList.add('card');
@@ -74,6 +69,7 @@ function showBookInLibrary() {
 			div.appendChild(p2);
 			div.appendChild(p3);
 			div.appendChild(p4);
+			dialog.close();
 			booksContainer.appendChild(div);
 		});
 		console.log(myLibrary);
@@ -85,9 +81,9 @@ function clearInput() {
 	inputTitle.value = ``;
 	inputAuthor.value = ``;
 	inputPages.value = ``;
-
-	document.querySelectorAll('input[name="read_status"]:checked'),
-		(input) => (input.checked = false);
+	document
+		.querySelectorAll('input[name="read_status"]:checked')
+		.forEach((input) => (input.checked = false));
 }
 showBookInLibrary();
 

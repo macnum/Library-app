@@ -122,6 +122,11 @@ fieldset svg:hover {
   align-items: center;
   margin: 50px 5px;
 }
+.card p {
+  text-align: center;
+  margin: 5px;
+  word-wrap: break-word;
+}
 dialog {
   background:linear-gradient(45deg, #7a0303, #5252e3);
   height: fit-content;
