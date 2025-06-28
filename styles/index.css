@@ -1,134 +1,32 @@
-*{
-    box-sizing: border-box;
+:root {
+  --bg-color: #111826;
+  --font-color: #fff;
+}
+* {
+  box-sizing: border-box;
+  
 }
 
-
-
-body {
-  background:linear-gradient(95deg, #ba5151, #7767ce);
-  color: #fff;
+body{
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}h1 {
   text-align: center;
-} 
+}
 
-main {
-  box-shadow: 2px 2px 6px rgba(89, 0, 255, 0.855);
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 59.375rem;
-  min-width: 12.5rem;
-  width: 400px;
-  margin: auto;
+
+ul, li {
+  list-style-type: none;
 }
-#book{
-  width: 12rem;
-  color: #fff;
-  position: relative;
-}
-#book fieldset {
-  background:linear-gradient(45deg, #7a0303, #5252e3);
-  border-radius: 5px;
-  border: none;
-  padding-top: 35px;
-}
-#book .form-title {
-  top: 7px;
-  position: absolute;
-  font-size: large;
-}
-.form-control input{
-  margin:3px 0;
-  padding: 0.4rem;
-  border-radius: 5px;
-  outline: none;
-  border: 1px  solid black;
-  background-color: #c8b9b9;
-}
-.form-control input:focus {
-  border: 1px solid #5252e3;
-}
-.form-control input:hover {
-  border: 1px solid #7a0303;
-}
-.read-container {
-  display: flex;
-  margin: 10px 0;
-  padding: 5px 0;
-  background-color: #eeefea;
-  position:relative;
-}
-.read-title {
-  position: absolute;
-  top: 10px;
-}
+
+
 .form-control {
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
-.form-control-radio {
-  display: flex;
-  height: 20px;
-
-}
-
-
-fieldset svg {
-  fill: #ffffff;
-  width: 45px;
-}
-
-fieldset svg:hover {
-  fill: #5252e3;
-}
-.create-form-btn {
-  margin: 20px 0;
-  fill: #7a0303;
-
-  svg {
-    width: 100%;
-  }
-}
-.books-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: .5rem;
-}
-
-
-
-
-.cancel.top {
-  position: absolute;
-  top: 5px;
-  right: -20px;
-  background-color: #7767ce;
-  background:linear-gradient(45deg, #7a0303, #5252e3)
-}
-
-
-
-
-
-.card{
-  width: 11rem;
-  height: 15.5rem;
-  background:linear-gradient(45deg, #7a0303, #5252e3);
-  border-radius: 5px;
-  color: #fff;
+#library-form{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 5px;
-}
-.card p {
-  text-align: center;
-  margin: 5px;
-  word-wrap: break-word;
-}
-dialog {
-  background:linear-gradient(45deg, #7a0303, #5252e3);
-  height: fit-content;
-  width: 15rem;
+  gap: 10px;
 }
