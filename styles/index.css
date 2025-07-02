@@ -1,32 +1,152 @@
 :root {
   --bg-color: #111826;
   --font-color: #fff;
+  --b-radius: .3125rem;
+  --bisque:  #ffe4c4;
+  --dark-gray-red:#7e7171;
+  --dark-brown: #422800;
 }
 * {
   box-sizing: border-box;
+  
   
 }
 
 body{
   background-color: var(--bg-color);
   color: var(--font-color);
+  
 }h1 {
   text-align: center;
 }
 
+main {
+  display: grid;
 
+}
+main section:first-child {
+  display: flex;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+}
 ul, li {
   list-style-type: none;
 }
+dialog, .card {
+  position: relative;
+  border-radius: var(--b-radius);
+}
+dialog{
+  padding: 40px 25px;
+}
 
+
+#library-form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#library-form input {
+  appearance: none;
+  border: 1px  solid var(--bg-color);
+  padding: .525rem;
+  border-radius: var(--b-radius);
+}
 
 .form-control {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-#library-form{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+button.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: inherit;
+  width: 40px;
+  border: none;
 }
+button.close:hover {
+	color: var(--dark-brown);
+	cursor: pointer;
+}
+
+button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  font-weight: 600;
+  
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(3,200px);
+  justify-items: center;
+  gap: 10rem 2rem;
+}
+.card{
+  border: 1px solid var(--bisque);
+  box-shadow: var(--font-color) 4px 4px 0 0;
+  background-color: var(--dark-gray-red);
+  color: var(--font-color);
+  
+  justify-content: center;
+  align-items: center;
+  height: 320px;
+  width: 200px;
+  padding-right: 40px;
+  display: grid;
+ 
+}
+
+.card ul {
+  display: grid;
+  row-gap: 30px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--font-color);
+  border-radius: 7px;
+  
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* CSS */
+.toggle-read-btn {
+  background-color: #fbeee0;
+  border: 2px solid var(--dark-brown);
+  border-radius: 30px;
+  box-shadow: var(--dark-brown) 4px 4px 0 0;
+  color: var(--dark-brown);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 9px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.toggle-read-btn:hover{
+  background-color: #fff;
+}
+
+.toggle-read-btn:active {
+  box-shadow: var(--dark-brown) 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
